@@ -25,9 +25,9 @@ public class HandleWindowAuthenticationPopUp
         //
         //
         //· Handling Window Authentication Pop Up
-        //http://Username:Password@SiteURL
         //
-        //· Driver.get();
+        //
+        //· Driver.get(http://Username:Password@SiteURL); while calling the URL, we need to specify the credentials along with the URL
         //
         //· Handling File Upload from Windows using AutoIT
         //
@@ -51,7 +51,7 @@ public class HandleWindowAuthenticationPopUp
         //
         //Build Script -scite.exe
         //
-        //Save it- .au3 extenstion
+        //Save it- .au3 extension
         //
         //Convert file into .exe by compiling .au3 file
         //
@@ -60,10 +60,10 @@ public class HandleWindowAuthenticationPopUp
         //
         //
         //
-        //
+        // Here's the script which we need to add it in the scite editor that will be located in "C:\Program Files (x86)\AutoIt3\SciTE"
         //ControlFocus("Open","","Edit1")
         //
-        //ControlSetText("Open","","Edit1","C:\Users\rahul\Documents\check\visit.pdf")
+        //ControlSetText("Open","","Edit1","Path of the file to be uploaded")
         //
         //ControlClick("Open","","Button1")
 
@@ -71,6 +71,8 @@ public class HandleWindowAuthenticationPopUp
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.findElement(By.xpath("//button[@id='browse']")).click();
         Thread.sleep(3000);
-        Runtime.getRuntime().exec("C:\\Users\\Arun\\Downloads\\fileUpladTest.exe");
+        Runtime.getRuntime().exec("Path to call the compiled .exe autoIT script file., when it's called after download button" +
+                "script in selenium, it will select the file [i.,e pasting the path of the filename in the pop-up filename input] & then" +
+                "it'll click the upload button");
     }
 }
